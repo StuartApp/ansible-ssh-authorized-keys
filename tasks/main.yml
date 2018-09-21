@@ -1,0 +1,6 @@
+---
+
+- include_tasks: ssh_auth_keys.yml
+  with_dict: "{{ssh_authorized_keys_default | deepmerge(ssh_authorized_keys)}}"
+  loop_control:
+    loop_var: ssh_authorized_keys_loop_users

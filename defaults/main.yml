@@ -1,0 +1,40 @@
+---
+
+ssh_authorized_keys_users: []
+ssh_authorized_keys_groups: {}
+ssh_authorized_keys: {}
+ssh_authorized_keys_default: {}
+ssh_authorized_keys_manage_dir: true
+ssh_authorized_keys_exclusive: true
+
+# Fail if a user that need to be configured does not exist
+ssh_authorized_key_fail_no_user: true
+
+# ssh_authorized_keys_users:
+#   username1:
+#     - ssh-rsa key1 comment1
+#     - ssh-rsa key2 comment2
+#   username2:
+#     - ssh-rsa key3 comment3
+#     - ssh-rsa key4 comment4
+
+## ############################################# ##
+##                   WARNING                     ##
+## more than 1 level of nested groups won't work ##
+## ############################################# ##
+# ssh_authorized_keys_groups:
+#   groupname1:
+#     - username1
+#     - username2
+#   groupname2:
+#     - username3
+#     - groupname1
+
+# ssh_authorized_keys:
+#   <username>:
+#     path: <path of the authotized_keys file> # optional
+#     manage_dir: <true|false> # optional, defaults to ssh_authorized_keys_manage_dir
+#     exclusive: <true|false> # optional, defaults to ssh_authorized_keys_exclusive
+#     auth_keys:
+#       - groupname1
+#       - username3
