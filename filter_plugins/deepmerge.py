@@ -33,7 +33,7 @@ def deepmerge(a, b):
                 raise YamlReaderError('Cannot merge non-dict "%s" into dict "%s"' % (b, a))
         else:
             raise YamlReaderError('NOT IMPLEMENTED "%s" into "%s"' % (b, a))
-    except TypeError, e:
+    except TypeError as e:
         raise YamlReaderError('TypeError "%s" in key "%s" when merging "%s" into "%s"' % (e, key, b, a))
     return a
 
