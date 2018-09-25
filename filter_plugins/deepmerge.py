@@ -10,7 +10,7 @@ def deepmerge(a, b):
     NOTE: tuples and arbitrary objects are not handled as it is totally ambiguous what should happen"""
     key = None
     try:
-        if a is None or isinstance(a, str) or isinstance(a, unicode) or isinstance(a, int) or isinstance(a, long) or isinstance(a, float):
+        if a is None or isinstance(a, str) or isinstance(a, int) or isinstance(a, long) or isinstance(a, float):
             # border case for first run or if a is a primitive
             a = b
         elif isinstance(a, list):
