@@ -1,0 +1,23 @@
+
+galaxy_info:
+  author: "Stuart Delivery"
+  license: BSD
+  min_ansible_version: 2.4
+  platforms:
+    - name: EL
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: opensuse
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+allow_duplicates: yes
+dependencies: []
